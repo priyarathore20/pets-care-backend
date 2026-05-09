@@ -1,13 +1,13 @@
 import cors from "cors";
+import dotenv from "dotenv";
 import express, { json, urlencoded } from "express";
 import helmet from "helmet";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 import router from "./src/routes/index.js";
 
 dotenv.config();
 
-const URL = process.env.URL;
+const URL = process.env.DB_URL;
 const PORT = process.env.PORT || 8000;
 
 const app = express();
